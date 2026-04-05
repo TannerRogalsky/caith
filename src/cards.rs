@@ -85,7 +85,7 @@ impl Deck {
                 suit: Suit::None,
             });
         }
-        let mut rng = rand::thread_rng();
+        let mut rng = rand::rng();
         cards.shuffle(&mut rng);
         cards
     }
@@ -101,7 +101,7 @@ impl Deck {
 
     /// Shuffle the remaining cards
     pub fn shuffle(&mut self) {
-        let mut rng = rand::thread_rng();
+        let mut rng = rand::rng();
         self.cards.shuffle(&mut rng);
     }
 
